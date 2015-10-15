@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :chat_id %><br>
+    <%= f.collection_select :chat_id, Chat.all, :id, :title %>
+  </div>
+  <div class="field">
     <%= f.label :user_id %><br>
     <%= f.collection_select :user_id, User.all, :id, :name %>
   </div>
